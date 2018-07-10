@@ -18,6 +18,46 @@
     let myObj = {size: 10, label: "Size 10 Object"};
     printLabel2(myObj);
 }
+{
+    /** 与接口相关的 属性数量 */
+    interface AInterface {
+        param1: number
+    }
+
+    // 变量 不能有任何多余的属性
+    const a: AInterface = {
+        param1: 1,
+        // param2: 2
+    };
+
+    // 作为参数 不能有任何多余的属性
+    let b = function (param: AInterface) {
+        param.param1
+    };
+
+    // 传入一个对象 可以有额外参数
+    const params = {
+        param1: 1,
+        param2: 2
+    };
+    b(params);
+
+    // 作为参数 字面量 不允许额外参数
+    b({
+        param1: 1,
+        // param2: 2
+    });
+
+    // 类接口 可以有额外属性 但是不能是私有 private 的
+    class C implements AInterface {
+        param1: number;
+        private param2: number;
+        method() {
+
+        }
+    }
+
+}
 
 {
     /**
@@ -74,7 +114,7 @@
         width?: number;
     }
 
-    function createSquare1(config: SquareConfig1):void {
+    function createSquare1(config: SquareConfig1): void {
         // ...
     }
 
@@ -85,7 +125,8 @@
     // let mySquare1 = createSquare1({colour: "red", width: 100}); // Error
 
     /** 不推荐 使用类型断言 让ts 认为 as 之前的类型 就是 as 之后的类型 */
-    let mySquare2 = createSquare({width: 100, opacity: 0.5} as SquareConfig1);
+    let mySquare2 = createSquare(<SquareConfig1>{width: 100, opacity: 0.5});
+    let mySquare3 = createSquare({width: 100, opacity: 0.5} as SquareConfig1);
 }
 {
     /**

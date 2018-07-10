@@ -63,7 +63,6 @@ typings/
 .next
 
 .gitignore
-.idea/inspectionProfiles/
-.idea/workspace.xml
+.idea
 "src/10.0 \351\253\230\347\272\247\347\261\273\345\236\213.js"
 "src/10.0 \351\253\230\347\272\247\347\261\273\345\236\213.ts"

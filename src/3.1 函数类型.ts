@@ -8,11 +8,20 @@ interface SearchFunc {
     ): boolean
 }
 
+
 let mySearch: SearchFunc;
 mySearch = function (source: string, subString: string) {
     let result = source.search(subString);
     return result > -1;
 };
+
+
+type SearchFuncType = (source: string, subString) => boolean
+let mySearch2: SearchFuncType = function (source, subString) {
+    let result = source.search(subString);
+    return result > -1;
+};
+
 
 /**
  * 函数参数 接口里定义的名字相匹配

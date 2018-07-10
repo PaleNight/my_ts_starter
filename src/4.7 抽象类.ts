@@ -22,7 +22,7 @@
  * */
 abstract class Department {
 
-    protected constructor(public name: string) {
+    protected constructor(public name: string) { // protected constructor 该类只能继承 自己创建实例
     }
 
     printName(): void {

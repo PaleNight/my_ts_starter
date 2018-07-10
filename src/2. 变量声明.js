@@ -6,13 +6,13 @@
         let { a, b = 1001 } = wholeObject;
     }
     keepWholeObject({ a: "2" });
-    function keepWholeObject1(wholeObject) {
+    function keepWholeObject1(wholeObject = {}) {
         let { a, b = 1001 } = wholeObject;
     }
     keepWholeObject1();
 }
 {
-    function f({ a, b }) {
+    function f1({ a, b }) {
         // ...
     }
 }

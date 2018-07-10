@@ -30,7 +30,7 @@
      * 相当于将Greeter类赋值给一个 变量
      * 在变量上面可以修改静态属性
      * */
-    let greeterMaker = Greeter;
+    let greeterMaker = Greeter; // typeof Greeter，意思是取Greeter类的类型
     greeterMaker.standardGreeting = "Hey there!";
     console.log("standardGreeting", greeterMaker.standardGreeting);
     console.log("standardGreeting", Greeter.standardGreeting);

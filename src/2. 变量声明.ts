@@ -7,7 +7,7 @@
     }
     keepWholeObject({a: "2"});
 
-    function keepWholeObject1(wholeObject?: { a: string, b?: number }) {
+    function keepWholeObject1(wholeObject: { a?: string, b?: number } = {}) {
         let {a, b = 1001} = wholeObject;
     }
     keepWholeObject1()
@@ -15,7 +15,7 @@
 {
     /** 函数参数解构 */
     type C = { a: string, b?: number }
-    function f({ a, b }: C): void {
+    function f1({ a, b }: C): void {
         // ...
     }
 }

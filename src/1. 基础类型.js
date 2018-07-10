@@ -36,6 +36,7 @@ _name = "smith";
         let x;
         // Initialize it
         x = ['hello']; // OK
+        // 类型断言 x[0]是一个string
         console.log(x[0].substr(1)); // OK
         // console.log(x[1].substr(1)); // Error, 'number' does not have 'substr'
     }
@@ -101,7 +102,7 @@ _name = "smith";
 }
 {
     /** Never */
-    // 返回never的函数必须存在无法达到的终点
+    // 返回never的函数必须存在无法达到的终点(执行到底)
     function error(message) {
         throw new Error(message);
     }

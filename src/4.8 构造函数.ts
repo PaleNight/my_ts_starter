@@ -20,6 +20,7 @@
     class Greeter {
         static standardGreeting = "Hello, there";
         greeting: string;
+
         greet() {
             if (this.greeting) {
                 return "Hello, " + this.greeting;
@@ -38,10 +39,10 @@
      * 相当于将Greeter类赋值给一个 变量
      * 在变量上面可以修改静态属性
      * */
-    let greeterMaker: typeof Greeter = Greeter;
+    let greeterMaker: typeof Greeter = Greeter; // typeof Greeter，意思是取Greeter类的类型
     greeterMaker.standardGreeting = "Hey there!";
-    console.log("standardGreeting",greeterMaker.standardGreeting);
-    console.log("standardGreeting",Greeter.standardGreeting);
+    console.log("standardGreeting", greeterMaker.standardGreeting);
+    console.log("standardGreeting", Greeter.standardGreeting);
 
     let greeter2: Greeter = new greeterMaker();
     console.log(greeter2.greet());

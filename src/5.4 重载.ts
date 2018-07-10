@@ -7,7 +7,6 @@ let suits = ["hearts", "spades", "clubs", "diamonds"];
 function pickCard(x: { suit: string; card: number; }[]): number;
 function pickCard(x: number): { suit: string; card: number; };
 function pickCard(x): any {
-
     // Otherwise just let them pick the card
     if (typeof x === "number") {
         let pickedSuit = Math.floor(x / 13);
@@ -15,7 +14,7 @@ function pickCard(x): any {
     }
     // Check to see if we're working with an object/array
     // if so, they gave us the deck and we'll pick the card
-    if (typeof x === "object") { // 推断为端详
+    if (typeof x === "object") { // 推断为对象
         if (Array.isArray(x)) { // 推断为数组
 
             return Math.floor(Math.random() * x.length);
