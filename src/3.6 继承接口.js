@@ -2,6 +2,8 @@
     let square = {};
     square.color = "blue";
     square.sideLength = 10;
+    square.sideLength = 11;
+    // square.unKnown = ""; // Error
 }
 {
     let square1 = {};

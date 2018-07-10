@@ -16,7 +16,7 @@
     /** 描述方法 */
     interface ClockInterface{
         currentTime:Date;
-        setTime(d:Date)
+        setTime(d:Date):void
     }
     class Clock implements ClockInterface{
         currentTime: Date;

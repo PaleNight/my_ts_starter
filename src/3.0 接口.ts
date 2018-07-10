@@ -48,7 +48,7 @@
         // param2: 2
     });
 
-    // 类接口 可以有额外属性 但是不能是私有 private 的
+    // 类接口 可以有额外属性 但是不能是固有的 不能是 private 类别的
     class C implements AInterface {
         param1: number;
         private param2: number;

@@ -13,11 +13,13 @@
     let square = <Square>{};
     square.color = "blue";
     square.sideLength = 10;
+    square.sideLength = 11;
+    // square.unKnown = ""; // Error
 }
 
 {
     /**
-     * 继承接口
+     * 继承多个接口
      * */
     interface Shape {
         color: string;
